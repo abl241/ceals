@@ -1,0 +1,100 @@
+/* Waitlist button styles */
+.waitlist-header-btn {
+  margin-left: 2rem;
+  padding: 0.7rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border-radius: 30px;
+  background: linear-gradient(90deg, #ff5a36 0%, #ffb347 100%);
+  color: #fff;
+  border: none;
+  box-shadow: 0 4px 16px rgba(255,90,54,0.15);
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+  letter-spacing: 1px;
+  outline: none;
+}
+
+.waitlist-header-btn:hover {
+  background: linear-gradient(90deg, #ffb347 0%, #ff5a36 100%);
+  transform: scale(1.07);
+  box-shadow: 0 8px 32px rgba(255,90,54,0.22);
+}
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  z-index: 1000;
+}
+
+.header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.logo {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.nav-tabs {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-tab {
+  background: none;
+  border: none;
+  color: #a1a1a6;
+  font-size: 0.9rem;
+  cursor: pointer;
+  padding: 0.5rem 0;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+.nav-tab:hover {
+  color: white;
+}
+
+.nav-tab.active {
+  color: white;
+}
+
+.nav-tab.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: white;
+  transform: scaleX(1);
+  transition: transform 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .nav-tabs {
+    gap: 1rem;
+  }
+  .waitlist-header-btn {
+    margin-left: 0;
+    width: 100%;
+    font-size: 1.2rem;
+    padding: 1rem 0;
+  }
+}
